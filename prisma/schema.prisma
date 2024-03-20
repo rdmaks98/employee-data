@@ -23,4 +23,6 @@ model Employee {
   JobTitle String
   Department String
   Salary String
+  Status Boolean @default(value: false)
+  Location String @default(value:"Ahmedabad")
 }
