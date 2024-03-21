@@ -23,3 +23,4 @@ app.use('/api/employee', empRoutes)
 app.listen(process.env.PORT, (req, res) => {
     console.log(`App Listening port is ${process.env.PORT}`);
 })
+exports.handler = app; // Export handler for Vercel
