@@ -14,6 +14,10 @@ app.use(async (req, res, next) => {
     next()
 });
 
+app.get('/', (req, res) => {
+    return res.json("hello world!");
+});
+
 app.use('/api/employee', empRoutes)
 
 app.listen(process.env.PORT, (req, res) => {
