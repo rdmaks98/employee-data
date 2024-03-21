@@ -15,7 +15,7 @@ app.use(async (req, res, next) => {
 });
 
 app.get('/', (req, res) => {
-    return res.json("hello world!");
+    return res.send("hello world!");
 });
 
 app.use('/api/employee', empRoutes)
