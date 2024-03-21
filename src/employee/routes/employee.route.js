@@ -6,4 +6,5 @@ router.post("/create", employeeController.addEmployee)
 router.put("/update/:id", employeeController.editEmployee)
 router.delete("/delete/:id", employeeController.deleteEmployee)
 router.get("/list", employeeController.getEmployee)
+router.get("/chart", employeeController.getEmployeeDynamicChart)
 module.exports = router;

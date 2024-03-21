@@ -110,5 +110,21 @@ const employeeController = {
         }
     },
 
+    async getEmployeeDynamicChart(req, res) {
+        const selectedFields = req.query.fields.split(',');
+
+        try {
+            const data = await prisma.employee.findMany({
+                select: selectedFields.reduce((acc, field) => ({ ...acc, [field]: true }), {}),
+            });
+            return res.json({
+                data: data,
+                message: "employee result get based on selected fields "
+            });
+        } catch (error) {
+            console.error(error);
+            return res.status(500).json({ error: 'Error retrieving data' });
+        }
+    }
 }
 module.exports = employeeController;
