@@ -1,8 +1,8 @@
 const express = require('express')
 const dotenv = require('dotenv')
 
-const prisma = require('./database/prisma');
-const empRoutes = require('./employee/routes/employee.route');
+const prisma = require('./src/database/prisma');
+const empRoutes = require('./src/employee/routes/employee.route');
 dotenv.config();
 
 const app = express();
