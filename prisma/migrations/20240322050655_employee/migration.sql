@@ -9,6 +9,8 @@ CREATE TABLE "Employee" (
     "JobTitle" TEXT NOT NULL,
     "Department" TEXT NOT NULL,
     "Salary" TEXT NOT NULL,
+    "Status" BOOLEAN NOT NULL DEFAULT false,
+    "Location" TEXT NOT NULL DEFAULT 'Ahmedabad',
 
     CONSTRAINT "Employee_pkey" PRIMARY KEY ("EmployeeID")
 );
